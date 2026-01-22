@@ -1,50 +1,50 @@
-# sql_advanced_analytics_project
+# Advanced SQL Analytics Project
 
 ---
 
 ## 📌 Project Overview
 
-This project is a **continuation of the SQL Exploratory Data Analysis (EDA)** work and moves deeper into **advanced analytical techniques used in real-world Business Intelligence environments**.
+This project focuses **specifically on advanced SQL analytics**, building on a separate EDA phase. The goal here is to answer **business questions around trends, performance, and contribution** using reporting-ready SQL, similar to how analytics is handled in real BI environments.
 
-While the exploratory phase focused on understanding data structure, coverage, and basic metrics, this project applies **advanced SQL analytics** to answer **how performance changes over time, how metrics accumulate, how different segments contribute to results, and where business performance is strong or weak**.
+The queries are designed to sit **behind Tableau and Power BI dashboards**, providing consistent metrics and reducing the need for complex calculations in the BI layer.
 
-The analysis is built on **Gold-layer dimensional tables**, ensuring that insights are consistent, trusted, and ready for executive reporting or BI dashboards.
+All analysis is performed on **Gold-layer dimensional tables**, ensuring results are trusted and reusable.
 
 ---
 
-## 🧠 Analytical Focus Areas
+## 🎯 Business Questions Addressed
 
-This project covers advanced analytics patterns commonly required by business stakeholders:
+This project helps answer questions such as:
 
-* **Change Over Time Analysis**
-  Track trends, growth, and declines across time periods to understand business momentum.
+* How is performance changing over time?
+* What do cumulative results look like within a period?
+* Which customers or products are driving the majority of results?
+* How much does each segment contribute to the total?
+* How do different segments compare to each other?
 
-* **Cumulative Analysis**
-  Calculate running totals and cumulative metrics to measure progress toward targets and long-term performance.
+These are common questions from leadership and stakeholders once basic reporting is already in place.
 
-* **Performance Analysis**
-  Evaluate customers, products, or other entities to identify top performers and underperformers.
+---
 
-* **Part-to-Whole Analysis**
-  Understand contribution percentages to determine what drives overall results.
+## 🛠️ Analytical Approach
 
-* **Data Segmentation**
-  Group and compare data across meaningful business segments for deeper insight.
+Instead of handling logic in dashboards or spreadsheets, this project uses **advanced SQL patterns** to:
 
-* **Business Reporting Enablement**
-  Produce analytics-ready outputs designed for Tableau, Power BI, and executive dashboards.
+* Centralize KPI logic
+* Support trend, ranking, and cumulative analysis
+* Produce clean, aggregated outputs for BI tools
+
+This keeps dashboards simpler and ensures the same question always returns the same answer.
 
 ---
 
 ## 🗄️ Data Model Used
 
-All analysis is performed on **analytics-ready Gold tables**:
+Analysis is built on analytics-ready dimensional tables:
 
-* **gold.dim_customers** – Customer attributes for segmentation and performance analysis
-* **gold.dim_products** – Product hierarchies used for contribution and ranking analysis
-* **gold.fact_sales** – Core transactional measures supporting time-based and cumulative metrics
-
-Using dimensional models ensures metrics remain **consistent, explainable, and reusable** across reports.
+* **gold.dim_customers** – segmentation and customer analysis
+* **gold.dim_products** – product hierarchy and contribution analysis
+* **gold.fact_sales** – core measures for time-based and cumulative metrics
 
 ---
 
@@ -53,12 +53,7 @@ Using dimensional models ensures metrics remain **consistent, explainable, and r
 ```text
 advanced-sql-analytics/
 │
-├── datasets/               # Reference to Gold-layer analytical tables
-│   ├── gold.dim_customers
-│   ├── gold.dim_products
-│   └── gold.fact_sales
-│
-├── scripts/                # Advanced analytics SQL scripts
+├── scripts/
 │   ├── change_over_time.sql
 │   ├── cumulative_analysis.sql
 │   ├── performance_analysis.sql
@@ -66,93 +61,37 @@ advanced-sql-analytics/
 │   ├── segmentation_analysis.sql
 │   └── reporting_queries.sql
 │
-├── LICENSE                 # MIT License
-└── README.md               # Project documentation
+├── LICENSE
+└── README.md
 ```
 
-The structure reflects **how advanced analytics is organized in production BI teams**, making the project easy to extend and maintain.
+---
+
+## 🔍 Analytics Covered
+
+* Change over time analysis
+* Cumulative and running totals
+* Performance ranking using window functions
+* Part-to-whole contribution analysis
+* Segment-based comparisons
 
 ---
 
-## 🔍 Analysis Breakdown
+## 📊 Business Impact
 
-### 1️⃣ Change Over Time Analysis
+In a BI setting, this type of analysis:
 
-* Compares metrics across days, months, or years
-* Identifies trends, seasonality, and growth patterns
-* Supports executive-level trend reporting
-
----
-
-### 2️⃣ Cumulative Analysis
-
-* Calculates running totals and rolling metrics
-* Tracks progress toward goals and long-term performance
-* Commonly used in financial and operational reporting
-
----
-
-### 3️⃣ Performance Analysis
-
-* Ranks customers, products, or segments using window functions
-* Highlights top contributors and performance gaps
-* Supports prioritization and optimization decisions
-
----
-
-### 4️⃣ Part-to-Whole Analysis
-
-* Calculates percentage contribution to totals
-* Identifies key drivers behind overall performance
-* Used heavily in executive summaries and dashboards
-
----
-
-### 5️⃣ Data Segmentation
-
-* Segments data by customer type, product category, or other dimensions
-* Enables comparative analysis across business groups
-* Supports targeted decision-making
-
----
-
-### 6️⃣ Reporting-Oriented Queries
-
-* Produces clean, aggregated outputs
-* Optimized for Tableau and Power BI consumption
-* Reduces downstream calculation complexity in BI tools
-
----
-
-## 🛠️ SQL Techniques Used
-
-* Window functions (`SUM() OVER`, `RANK()`, `ROW_NUMBER()`)
-* Time-based calculations and date logic
-* Aggregations and grouping strategies
-* Part-to-whole percentage calculations
-* Analytical query optimization patterns
-
----
-
-## 🎯 Business Value
-
-This project demonstrates how advanced SQL analytics:
-
-* Turns trusted data into **actionable insights**
-* Enables trend-based and performance-driven decisions
-* Reduces BI-layer complexity by handling logic in SQL
-* Supports consistent KPI reporting across teams
-
-It highlights not just SQL expertise, but the ability to **think analytically and answer business questions at scale**.
+* Makes trends and performance gaps visible
+* Reduces repeated KPI logic across dashboards
+* Improves confidence in reported numbers
+* Speeds up responses to ad-hoc business questions
 
 ---
 
 ## 👤 About Me
 
 **Denzel Mutogo**
-*Tableau Developer | Data Analyst | Business Intelligence*
-
-I specialize in building **business-aligned analytics and BI solutions** using SQL, Tableau, and Power BI. My work focuses on turning complex datasets into **clear insights that support confident decision-making**, particularly within healthcare and finance environments.
+Tableau Developer | Data Analyst | Business Intelligence
 
 ---
 
